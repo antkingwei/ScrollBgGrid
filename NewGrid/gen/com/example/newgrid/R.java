@@ -31,9 +31,10 @@ public final class R {
         public static final int item_bg_normal=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f090006;
+        public static final int action_settings=0x7f090007;
         public static final int grid_view=0x7f090000;
         public static final int item_imageview=0x7f090005;
+        public static final int item_textview=0x7f090006;
         public static final int linear_layout=0x7f090003;
         public static final int placeholder=0x7f090004;
         public static final int scroll_view=0x7f090001;
