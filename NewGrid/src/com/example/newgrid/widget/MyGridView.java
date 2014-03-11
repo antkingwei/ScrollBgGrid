@@ -113,7 +113,7 @@ public class MyGridView extends ViewGroup {
         }
         if (position < total) {
             ItemBean bean = list.get(position);
-//            holderView.item_imagview.setLayoutParams(new LinearLayout.LayoutParams(item_width, item_width));
+            holderView.item_imagview.setLayoutParams(new LinearLayout.LayoutParams(item_width, item_width));
             mBitmapManager.loadBitmap(bean.image_url, holderView.item_imagview, null, item_width);
             holderView.item_textview.setText(bean.item_name);
             contentView.setOnClickListener(new View.OnClickListener() {
