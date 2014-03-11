@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -103,17 +104,18 @@ public class MyGridView extends ViewGroup {
         if (contentView == null) {
             contentView = mLayoutInflater.inflate(R.layout.adapter_item, null);
             holderView = new HolderView();
-            holderView.item_textview = (TextView)contentView.findViewById(R.id.item_textview);
+//            holderView.item_textview = (TextView)contentView.findViewById(R.id.item_textview);
             holderView.item_imagview = (ImageView)contentView.findViewById(R.id.item_imageview);
+            
             contentView.setTag(holderView);
         } else {
             holderView = (HolderView)contentView.getTag();
         }
         if (position < total) {
             ItemBean bean = list.get(position);
-         
+            holderView.item_imagview.setLayoutParams(new LinearLayout.LayoutParams(item_width, item_width));
             mBitmapManager.loadBitmap(bean.image_url, holderView.item_imagview, null, item_width);
-            holderView.item_textview.setText(bean.item_name);
+//            holderView.item_textview.setText(bean.item_name);
             contentView.setOnClickListener(new View.OnClickListener() {
 
                 @Override

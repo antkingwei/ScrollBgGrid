@@ -37,7 +37,6 @@ private MyGridView gridView;
    private void init(){
        scrollView = (ObservableScrollView)this.findViewById(R.id.scroll_view);
        textview= (TextView)this.findViewById(R.id.top_view);
-       
        gridView = (MyGridView)this.findViewById(R.id.grid_view);
        linearLayout = (LinearLayout)this.findViewById(R.id.linear_layout);
        scrollView.setCallbacks(this);
